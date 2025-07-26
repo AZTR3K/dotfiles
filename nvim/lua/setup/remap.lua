@@ -1,26 +1,45 @@
-vim.g.mapleader = ' '
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+-- Vim remaps
 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+-- Better pane navigation
+vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
+vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
+vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
+vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
-
-vim.keymap.set({ "n", "v" }, "<C-_>", ":message<CR>")
-
+-- Yank
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
+-- Open explorer
+vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+
+-- Move selected lines up/down in visual mode
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- View message history
+vim.keymap.set({ "n", "v" }, "<C-_>", ":message<CR>")
+
+-- Improve navigation behaviours
+-- Join lines
 vim.keymap.set("n", "J", "mzJ`z")
+
+-- Scroll and center
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- Go to next and previous search result
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Disable Ex mode
 vim.keymap.set("n", "Q", "<nop>")
+
+-- Format file
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- This is my personal setup for debugging and running assembly asm format files
--- using: i3wm & xdotool for echoing keyboard keys
+-- using: hyprland wm and xdotool for echoing keyboard keys
 -- compiles locally and then runs .com files on dosbox
 
 vim.keymap.set("n", "<leader>d", function()
