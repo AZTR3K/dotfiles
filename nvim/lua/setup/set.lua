@@ -1,8 +1,5 @@
 -- Vim setup
 
--- Set leader key
-vim.g.mapleader = " "
-
 -- Set to block cursor
 vim.opt.guicursor = ""
 

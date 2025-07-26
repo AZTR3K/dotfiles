@@ -1,5 +1,8 @@
 -- Vim remaps
 
+-- Set leader key
+vim.g.mapleader = " "
+
 -- Better pane navigation
 vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
 vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
