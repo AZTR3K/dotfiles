@@ -24,10 +24,24 @@ return {
             },
 
             handlers = {
+                ["pyright"] = function()
+                    require("lspconfig").pyright.setup({
+                        settings = {
+                            python = {
+                                analysis = {
+                                    typeCheckingMode = "off",
+                                    diagnosticMode = "openFilesOnly",
+                                    autoSearchPaths = true,
+                                    useLibraryCodeForTypes = true
+                                }
+                            }
+                        }
+                    })
+                end,
                 function(server_name)
                     require("lspconfig")[server_name].setup {}
-                end
-            }
+                end,
+            },
         })
 
         require("luasnip.loaders.from_vscode").lazy_load()
