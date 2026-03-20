@@ -41,12 +41,3 @@ The `master-installation.sh` handles the heavy lifting in this order:
 - **`scripts/`**: Modular logic for specific installation tasks.
 
 ---
-
-## Key Bindings Summary
-
-| Tool | Action | Binding |
-| :--- | :--- | :--- |
-| **Tmux** | Leader Key | `Ctrl-s` |
-| **Tmux** | Reload Config | `Prefix + r` |
-| **Hyprland** | Terminal (Ghostty) | `SUPER + ENTER` |
-| **Hyprland** | Zen Browser | `SUPER + z` |
