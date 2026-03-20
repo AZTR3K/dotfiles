@@ -48,6 +48,5 @@ The `master-installation.sh` handles the heavy lifting in this order:
 | :--- | :--- | :--- |
 | **Tmux** | Leader Key | `Ctrl-s` |
 | **Tmux** | Reload Config | `Prefix + r` |
-| **Yazi** | Toggle Hidden Files | `z` then `h` |
 | **Hyprland** | Terminal (Ghostty) | `SUPER + ENTER` |
 | **Hyprland** | Zen Browser | `SUPER + z` |
